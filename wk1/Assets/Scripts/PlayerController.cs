@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         }
         if (!onGroundState && countScoreState)
         {
-        if (MathF.Abs(transform.position.x - enemyLocation.position.x) < 0.5f)
+            if (MathF.Abs(transform.position.x - enemyLocation.position.x) < 0.5f)
             {
                 countScoreState = false;
                 score++;
@@ -78,7 +78,6 @@ public class PlayerController : MonoBehaviour
         }
         }
 
-    // called when the cube hits the floor
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Ground"))
@@ -88,13 +87,14 @@ public class PlayerController : MonoBehaviour
             scoreText.text = "Score: " + score.ToString();
         };
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-        Debug.Log("Collided with Goomba!");
-        Time.timeScale = 0.0f;
-        restartButton.gameObject.SetActive(true);
+            Debug.Log("Collided with Goomba!");
+            Time.timeScale = 0.0f;
+            restartButton.gameObject.SetActive(true);
         }
     }
 

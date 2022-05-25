@@ -27,13 +27,6 @@ public class MenuController : MonoBehaviour
 
     public void RestartButtonClicked()
     {
-        foreach(Transform eachChild in transform){
-            if (eachChild.name !="Score"){
-                Debug.Log("Child found. Name: " + eachChild.name);
-                //disable them
-                SceneManager.LoadScene("Mario");
-                Time.timeScale=1.0f;
-            }
-        }
+        Application.LoadLevel(Application.loadedLevel);
     }
 }
