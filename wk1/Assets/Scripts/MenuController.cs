@@ -1,3 +1,6 @@
+using UnityEngine.SceneManagement;
+using System;
+using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +21,18 @@ public class MenuController : MonoBehaviour
                 // disable them
                 eachChild.gameObject.SetActive(false);
                 Time.timeScale = 1.0f;
+            }
+        }
+    }
+
+    public void RestartButtonClicked()
+    {
+        foreach(Transform eachChild in transform){
+            if (eachChild.name !="Score"){
+                Debug.Log("Child found. Name: " + eachChild.name);
+                //disable them
+                SceneManager.LoadScene("Mario");
+                Time.timeScale=1.0f;
             }
         }
     }
