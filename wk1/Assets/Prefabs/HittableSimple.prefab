@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 9115183468553537965}
   - component: {fileID: 9115183468553537962}
   - component: {fileID: 9115183468553537967}
+  - component: {fileID: 2686171527580914418}
   m_Layer: 6
   m_Name: EdgeDetector
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,11 +147,28 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.010999978}
+  m_ConnectedAnchor: {x: 0, y: -0.01999998}
   m_AutoConfigureDistance: 1
   m_Distance: 0.005
   m_DampingRatio: 0
   m_Frequency: 1
+--- !u!114 &2686171527580914418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115183468553537960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5593fd2062f55486db420d6ba01f8bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidBody: {fileID: 9115183468553537965}
+  springJoint: {fileID: 9115183468553537967}
+  consummablePrefab: {fileID: 6621101902936586132, guid: 9cfb7b76566094c4ab2a0ccf58b054fe, type: 3}
+  spriteRenderer: {fileID: 9115183468553537964}
+  usedQuestionBox: {fileID: -452746311, guid: 855dc7396df3c4e49ac4d21234eac5e1, type: 3}
 --- !u!1 &9115183470086688288
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9115183470642830660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.931, z: 0}
+  m_LocalPosition: {x: 0, y: 0.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

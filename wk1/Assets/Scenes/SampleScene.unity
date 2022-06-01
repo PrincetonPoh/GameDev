@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 251113901}
   m_Layer: 0
   m_Name: Mario
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367,8 +367,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251113894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.86, y: -2.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.0004, y: -2.4109, z: 0}
+  m_LocalScale: {x: 0.7191, y: 0.7191, z: 0.7191}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1586,11 +1586,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5376140123222117863, guid: 9b7b3e8bfcf8c4799af938e47e654017, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.016
+      value: 6.63
       objectReference: {fileID: 0}
     - target: {fileID: 5376140123222117863, guid: 9b7b3e8bfcf8c4799af938e47e654017, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.969
+      value: 4.05
       objectReference: {fileID: 0}
     - target: {fileID: 5376140123222117863, guid: 9b7b3e8bfcf8c4799af938e47e654017, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1755,6 +1755,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9115183468553537965, guid: 7fea02fa2805f431bb0e695df66f2221, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: c6c2adb92881d4f769c3126e4fcaafb5, type: 2}
     - target: {fileID: 9115183470086688288, guid: 7fea02fa2805f431bb0e695df66f2221, type: 3}
       propertyPath: m_Name
       value: HittableSimple
@@ -1765,7 +1769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9115183470086688291, guid: 7fea02fa2805f431bb0e695df66f2221, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.48
+      value: -6.02
       objectReference: {fileID: 0}
     - target: {fileID: 9115183470086688291, guid: 7fea02fa2805f431bb0e695df66f2221, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1803,5 +1807,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9115183470642830662, guid: 7fea02fa2805f431bb0e695df66f2221, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7fea02fa2805f431bb0e695df66f2221, type: 3}

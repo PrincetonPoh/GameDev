@@ -25,10 +25,14 @@ public class QuestionBoxController : MonoBehaviour
 
     void  OnCollisionEnter2D(Collision2D col)
     {
+            Debug.Log("boink!");
+
         if (col.gameObject.CompareTag("Player") &&  !hit){
+            Debug.Log("boink1");
             hit  =  true;
             // spawn the mushroom prefab slightly above the box
             Instantiate(consummablePrefab, new  Vector3(this.transform.position.x, this.transform.position.y  +  1.0f, this.transform.position.z), Quaternion.identity);
+            Debug.Log("boink2");
         }
     }
 }
