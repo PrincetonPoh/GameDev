@@ -13,7 +13,7 @@ public class MushroomController : MonoBehaviour
     void Start()
     {
         mushroomBody = GetComponent<Rigidbody2D>();
-        mushroomBody.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+        mushroomBody.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
         start = true;
         
     }
