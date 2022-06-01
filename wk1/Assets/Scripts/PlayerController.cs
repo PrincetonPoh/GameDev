@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public GameObject restartButton;
 
     private  Animator marioAnimator;
+    private AudioSource marioAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
         marioBody = GetComponent<Rigidbody2D>();
         marioSprite = GetComponent<SpriteRenderer>();
         marioAnimator  =  GetComponent<Animator>();
+        marioAudio  =  GetComponent<AudioSource>();
 
         restartButton.gameObject.SetActive(false);
 
@@ -114,4 +116,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void  PlayJumpSound(){
+        marioAudio.PlayOneShot(marioAudio.clip);
+    }
 }
