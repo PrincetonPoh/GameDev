@@ -125,9 +125,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.5, y: -0.48867813}
+  - {x: -0.4630158, y: -0.49073282}
   - {x: -0.0028355718, y: -0.48867813}
-  - {x: 0.4770034, y: -0.48867804}
+  - {x: 0.43590957, y: -0.48867804}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -147,7 +147,7 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.006000042, y: -0.08200002}
+  m_ConnectedAnchor: {x: 0, y: -0.01999998}
   m_AutoConfigureDistance: 1
   m_Distance: 0.005
   m_DampingRatio: 0.5
