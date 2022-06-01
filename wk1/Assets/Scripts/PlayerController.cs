@@ -104,6 +104,12 @@ public class PlayerController : MonoBehaviour
             countScoreState = false; // reset score state
             scoreText.text = "Score: " + score.ToString();
         };
+
+        if (col.gameObject.CompareTag("Obstacle") && MathF.Abs(marioBody.velocity.y) < 0.01f)
+        { 
+            onGroundState = true; // back on ground
+            marioAnimator.SetBool("onGround", onGroundState);
+        };
     }
 
     void OnTriggerEnter2D(Collider2D other)
