@@ -25,28 +25,44 @@ public class PlayerController : MonoBehaviour
     private bool countScoreState = false;
     public GameObject restartButton;
 
+    private  Animator marioAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
         // Set to be 30 FPS
         Application.targetFrameRate =  30;
+        
+        // get components
         marioBody = GetComponent<Rigidbody2D>();
         marioSprite = GetComponent<SpriteRenderer>();
+        marioAnimator  =  GetComponent<Animator>();
+
         restartButton.gameObject.SetActive(false);
+
     }
     // Update is called once per frame
     void Update()
     {
+        // always update animatior's params to match Mario's current params along x-axis
+        marioAnimator.SetFloat("xSpeed", Mathf.Abs(marioBody.velocity.x));
+        marioAnimator.SetBool("onGround", onGroundState);
+        
         // toggle state
         if (Input.GetKeyDown("a") && faceRightState){
             faceRightState = false;
             marioSprite.flipX = true;
+            
+            if (Mathf.Abs(marioBody.velocity.x) >  1.0) marioAnimator.SetTrigger("onSkid");
         }
 
         if (Input.GetKeyDown("d") && !faceRightState){
             faceRightState = true;
             marioSprite.flipX = false;
+
+            if (Mathf.Abs(marioBody.velocity.x) >  1.0) marioAnimator.SetTrigger("onSkid");
         }
+        
         if (!onGroundState && countScoreState)
         {
             if (MathF.Abs(transform.position.x - enemyLocation.position.x) < 0.5f)
