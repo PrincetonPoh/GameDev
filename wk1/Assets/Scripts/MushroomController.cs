@@ -27,7 +27,7 @@ public class MushroomController : MonoBehaviour
         mushroomBody.velocity = velocity;
     }
 
-    void onBecameInvisible(){
+    void OnBecameInvisible(){
         Destroy(gameObject);
     }
 

@@ -52,7 +52,7 @@ public class QuestionBoxController : MonoBehaviour
         rigidBody.bodyType  =  RigidbodyType2D.Static; // make the box unaffected by Physics
 
         //reset box position
-        this.transform.localPosition  =  Vector3.zero;
+        this.transform.localPosition  =  new Vector3(0, 1, 0);
         springJoint.enabled  =  false; // disable spring
     }
 }
