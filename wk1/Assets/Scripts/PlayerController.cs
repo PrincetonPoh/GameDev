@@ -103,6 +103,7 @@ public class PlayerController : MonoBehaviour
             onGroundState = true; // back on ground
             countScoreState = false; // reset score state
             scoreText.text = "Score: " + score.ToString();
+            GameObject.Find("Dust").GetComponent<ParticleSystem>().Play();
         };
 
         if (col.gameObject.CompareTag("Obstacle") && MathF.Abs(marioBody.velocity.y) < 0.01f)
