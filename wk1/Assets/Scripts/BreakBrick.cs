@@ -22,10 +22,12 @@ public class BreakBrick : MonoBehaviour
         Debug.Log("Breakable Brick Collision");
         if (col.gameObject.CompareTag("Player") &&  !broken){
             broken  =  true;
+            debris.SetActive(true);
             // assume we have 5 debris per box
             for (int x =  0; x<5; x++){
                 Debug.Log("Initialize Debris");
                 Instantiate(debris, transform.position, Quaternion.identity);
+                Debug.Log("Finished initializing Debris");
             }
             // GetComponent<AudioSource>().Play();
             GetComponent<EdgeCollider2D>().enabled  =  false;
