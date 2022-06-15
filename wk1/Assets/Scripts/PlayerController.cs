@@ -11,6 +11,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameConstants gameConstants;
     public float speed;
     private Rigidbody2D marioBody;
     public float maxSpeed;
@@ -65,15 +66,7 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(marioBody.velocity.x) >  1.0) marioAnimator.SetTrigger("onSkid");
         }
         
-        if (!onGroundState && countScoreState)
-        {
-            if (MathF.Abs(transform.position.x - enemyLocation.position.x) < 0.5f)
-            {
-                countScoreState = false;
-                score++;
-                Debug.Log(score);
-            }
-        }
+        
     }
 
     void FixedUpdate()

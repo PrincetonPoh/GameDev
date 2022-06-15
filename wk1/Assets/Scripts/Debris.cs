@@ -7,6 +7,8 @@ public class Debris : MonoBehaviour
     private  Rigidbody2D rigidBody;
     private  Vector3 scaler;
 
+    
+
     // Start is called before the first frame update
     void  Start()
     {
@@ -31,7 +33,7 @@ public class Debris : MonoBehaviour
             // wait for next frame
             yield  return  null;
         }
-
+        // Debug.Log("debris works");
         Destroy(gameObject);
 
     }
