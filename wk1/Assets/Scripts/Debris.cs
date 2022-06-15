@@ -10,6 +10,7 @@ public class Debris : MonoBehaviour
     // Start is called before the first frame update
     void  Start()
     {
+        Debug.Log("Starting Debris");
         // we want the object to have a scale of 0 (disappear) after 30 frames. 
         scaler  =  transform.localScale  / (float) 30 ;
         rigidBody  =  GetComponent<Rigidbody2D>();
@@ -17,7 +18,7 @@ public class Debris : MonoBehaviour
     }
 
     IEnumerator  ScaleOut(){
-
+        Debug.Log("Scaling out debris");
         Vector2 direction =  new  Vector2(Random.Range(-1.0f, 1.0f), 1);
         rigidBody.AddForce(direction.normalized  *  10, ForceMode2D.Impulse);
         rigidBody.AddTorque(10, ForceMode2D.Impulse);
@@ -32,7 +33,7 @@ public class Debris : MonoBehaviour
             yield  return  null;
         }
 
-        Destroy(gameObject);
+        // Destroy(gameObject);
 
     }
 }
